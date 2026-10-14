@@ -15,7 +15,7 @@ class Scraper(ABC):
         auto_open_devtools: bool = options.get("devtools_open", False)
         load_strategy: str = options.get("load_strategy", "normal")
         self._timeout_page_load: int = options.get("timeout_page_load", 20)
-        self._page_delay: int = options.get("interval_page_delay", 2)
+        self._between_page_delay: int = options.get("interval_page_delay", 2)
         
         self._options = webdriver.ChromeOptions()
         if headless: self._options.add_argument('--headless')

@@ -88,7 +88,7 @@ class InstagramPostScraper(Scraper):
                     logging.info(f"{username} - {content}")
                 self._results.append({"url": url, "username": username, "comment": content})
 
-            time.sleep(self._page_delay)
+            time.sleep(self._between_page_delay)
 
         logging.info(f"Fetched {len(self._results)} comments from {len(urls)} URLs ✅")
 

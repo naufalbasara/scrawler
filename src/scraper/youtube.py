@@ -68,7 +68,7 @@ class YoutubeVideoScrapper(Scraper):
                     logging.error(error)
                     break
 
-            time.sleep(self._page_delay)
+            time.sleep(self._between_page_delay)
 
         logging.info(f"Fetched {len(self._results)} comments from {len(urls)} URLs ✅")
 
